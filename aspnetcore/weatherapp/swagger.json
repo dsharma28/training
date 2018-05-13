@@ -1,0 +1,134 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample weather API",
+        "version": "1.0.0",
+        "title": "Weather API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "email": "deepak.h.sharma@capgemini.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "host": "swagger.io",
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/weather/{zipcode}": {
+            "get": {
+                "tags": [
+                    "weather"
+                ],
+                "summary": "Get Weather By Zip Code",
+                "description": "Get weather by Zip Code",
+                "operationId": "getWeatherByZipCode",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "zipcode",
+                        "in": "path",
+                        "description": "zipcode",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Forecast"
+                            },
+                            "example": [
+                                {
+                                    "zipcode": 10001,
+                                    "day": "Monday",
+                                    "high": 80,
+                                    "low": 70,
+                                    "detail": "Rainy"
+                                },
+                                {
+                                    "zipcode": 10002,
+                                    "day": "Tuesday",
+                                    "high": 80,
+                                    "low": 70,
+                                    "detail": "Rainy"
+                                }
+                            ]
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid value"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "500": {
+                        "description": "Unexpected Error has occurred",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Forecast": {
+            "type": "object",
+            "properties": {
+                "zipcode": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Zipcode of the location"
+                },
+                "day": {
+                    "type": "string",
+                    "description": "day"
+                },
+                "high": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "High temperature"
+                },
+                "low": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Low temperature"
+                },
+                "detail": {
+                    "type": "string",
+                    "description": "Forecast of the location"
+                }
+            }
+        },
+        "Error": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "fields": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
+    }
+}
