@@ -62,7 +62,7 @@ namespace WeatherApi.Controllers
 
             List<Forecast> forecastList = new List<Forecast>();              Forecast f1 = new Forecast();             f1.Day = "Monday";             f1.High = 80;             f1.Low = 65;
             f1.Zipcode = zipcode;             f1.Detail = "Partially Cloudy";             forecastList.Add(f1);              Forecast f2 = new Forecast();             f2.Day = "Tuesday";             f2.High = 90;             f2.Low = 70;
-            f2.Zipcode = zipcode;             f2.Detail = "Full Sunny";             forecastList.Add(f2);              return new ObjectResult(forecastList);
+            f2.Zipcode = zipcode;             f2.Detail = "Partially Rainy";             forecastList.Add(f2);              return new ObjectResult(forecastList);
         }
     }
 }

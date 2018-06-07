@@ -4,6 +4,8 @@ VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi", "WeatherApi\WeatherApi.csproj", "{0542280D-2FCC-4A6B-84E1-ECCECFA9E4A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi.IntegrationTest", "WeatherApi.IntegrationTest\WeatherApi.IntegrationTest.csproj", "{96D3C5D0-DDA9-446F-A1D9-D25AD597FBFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +16,10 @@ Global
 		{0542280D-2FCC-4A6B-84E1-ECCECFA9E4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0542280D-2FCC-4A6B-84E1-ECCECFA9E4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0542280D-2FCC-4A6B-84E1-ECCECFA9E4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D3C5D0-DDA9-446F-A1D9-D25AD597FBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D3C5D0-DDA9-446F-A1D9-D25AD597FBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D3C5D0-DDA9-446F-A1D9-D25AD597FBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D3C5D0-DDA9-446F-A1D9-D25AD597FBFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
