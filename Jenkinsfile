@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat(script: 'dotnet build aspnetcore/weatherapp/WeatherApi.sln', returnStatus: true, returnStdout: true)
+        bat(script: 'dotnet build aspnetcore/weatherapp', returnStatus: true, returnStdout: true)
       }
     }
   }
