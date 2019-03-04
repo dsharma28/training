@@ -34,7 +34,7 @@ namespace WeatherApi.Controllers
         /// <summary>
         /// Get Weather By Zip Code
         /// </summary>
-        /// <remarks>Get weather by Zip Code</remarks>
+        /// <remarks>Get weather details by Zip Code</remarks>
         /// <param name="zipcode">zipcode</param>
         /// <response code="200">successful operation</response>
         /// <response code="400">Invalid value</response>
