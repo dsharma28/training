@@ -44,7 +44,7 @@ namespace WeatherApi.Controllers
         [Route("/api/weather/{zipcode}")]
         [ValidateModelState]
         [SwaggerOperation("GetWeatherByZipCode")]
-        [SwaggerResponse(statusCode: 200, type: typeof(List<Forecast>), description: "successful operation")]
+        [SwaggerResponse(statusCode: 200, type: typeof(List<Forecast>), description: "This is successful operation")]
         [SwaggerResponse(statusCode: 500, type: typeof(Error), description: "Unexpected Error has occurred")]
         public virtual IActionResult GetWeatherByZipCode([FromRoute][Required]int? zipcode)
         { 
